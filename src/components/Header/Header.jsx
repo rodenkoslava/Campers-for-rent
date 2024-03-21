@@ -4,17 +4,9 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <ul>
-          <li>
-            <NavLink to="/">HOME</NavLink>
-          </li>
-          <li>
-            <NavLink to="/catalog">CATALOG</NavLink>
-          </li>
-          <li>
-            <NavLink to="/favorites">FAVORITES</NavLink>
-          </li>
-        </ul>
+        <NavLink to="/">HOME</NavLink>
+        <NavLink to="/catalog">CATALOG</NavLink>
+        <NavLink to="/favorites">FAVORITES</NavLink>
       </nav>
     </header>
   );
