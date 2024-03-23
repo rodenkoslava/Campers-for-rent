@@ -1,7 +1,13 @@
+import { CardComponent } from "../../components/Cards";
+import { CurrentLocation } from "../../components/CurrentLocation";
+import { FilterComponent } from "../../components/Filters";
+
 const CatalogPage = () => {
   return (
     <>
-      <h1>Catalog</h1>
+      <CurrentLocation />
+      <FilterComponent />
+      <CardComponent />
     </>
   );
 };
