@@ -9,7 +9,8 @@ The "Campers-for-rent" project is an online platform for renting motorhomes (cam
 * Detailed view of camper information including photos, features, rental prices, and availability.
 
 - Online booking of campers with the option to select dates and rental duration.
-  '.'Viewing and rating of reviews from other users about the campers.
+
+* Viewing and rating of reviews from other users about the campers.
 
 ## **Technologies**
 
