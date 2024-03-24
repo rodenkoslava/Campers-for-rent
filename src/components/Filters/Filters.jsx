@@ -1,62 +1,128 @@
-import React, { useState } from "react";
+import { Field, Form, Formik } from "formik";
+import sprite from "../../assets/sprite.svg";
+import {
+  Button,
+  FilterTitle,
+  Group,
+  GroupTitle,
+  Input,
+  Label,
+  Span,
+  SvgIcon,
+  SvgIconCampers,
+} from "./Filters.styled";
+import { useDispatch } from "react-redux";
+import { changeEquipment, changeType } from "../../redux/filter/filterSlice";
 
-const FilterComponent = () => {
-  // Створюємо стан для зберігання вибраних фільтрів
-  const [selectedFilters, setSelectedFilters] = useState([]);
+export const Filters = () => {
+  const dispatch = useDispatch();
 
-  // Масив доступних фільтрів
-  const filters = [
-    "Filter 1",
-    "Filter 2",
-    "Filter 3",
-    "Filter 4",
-    "Filter 5",
-    "Filter 6",
-    "Filter 7",
-    "Filter 8",
-  ];
-
-  // Функція для додавання або видалення фільтра
-  const toggleFilter = (filter) => {
-    if (selectedFilters.includes(filter)) {
-      setSelectedFilters(selectedFilters.filter((item) => item !== filter));
-    } else {
-      setSelectedFilters([...selectedFilters, filter]);
-    }
+  const handleSubmit = (values) => {
+    dispatch(changeEquipment(values.equipment));
+    dispatch(changeType(values.type));
   };
 
   return (
-    <div>
-      <h2>Фільтри</h2>
-      <div>
-        {/* Відображення кнопок фільтрів */}
-        {filters.map((filter) => (
-          <button
-            key={filter}
-            onClick={() => toggleFilter(filter)}
-            style={{
-              marginRight: "10px",
-              background: selectedFilters.includes(filter) ? "blue" : "gray",
-              color: "white",
-              border: "none",
-              borderRadius: "5px",
-              padding: "5px 10px",
-              cursor: "pointer",
-            }}
-          >
-            {filter}
-          </button>
-        ))}
-      </div>
-      <div>
-        {/* Відображення вибраних фільтрів */}
-        <h3>Вибрані фільтри:</h3>
-        {selectedFilters.map((filter) => (
-          <div key={filter}>{filter}</div>
-        ))}
-      </div>
-    </div>
+    <>
+      <FilterTitle>Filters</FilterTitle>
+
+      <Formik
+        initialValues={{
+          equipment: [],
+          type: "",
+        }}
+        onSubmit={handleSubmit}
+      >
+        <Form>
+          <GroupTitle id="checkbox-group-equipment">
+            Vehicle equipment
+          </GroupTitle>
+          <Group role="group" aria-labelledby="checkbox-group-equipment">
+            <Label>
+              <Input type="checkbox" name="equipment" value="airConditioner" />
+              <Span>
+                <SvgIcon style={{ fill: "#101828" }}>
+                  <use href={sprite + "#icon-ac"} />
+                </SvgIcon>
+                AC
+              </Span>
+            </Label>
+            <Label>
+              <Input type="checkbox" name="equipment" value="automatic" />
+              <Span>
+                <SvgIcon>
+                  <use href={sprite + "#icon-automatic"} />
+                </SvgIcon>
+                Automatic
+              </Span>
+            </Label>
+
+            <Label>
+              <Input type="checkbox" name="equipment" value="kitchen" />
+              <Span>
+                <SvgIcon>
+                  <use href={sprite + "#icon-kitchen"} />
+                </SvgIcon>
+                Kitchen
+              </Span>
+            </Label>
+            <Label>
+              <Input type="checkbox" name="equipment" value="TV" />
+              <Span>
+                <SvgIcon>
+                  <use href={sprite + "#icon-tv"} />
+                </SvgIcon>
+                TV
+              </Span>
+            </Label>
+            <Label>
+              <Input type="checkbox" name="equipment" value="shower" />
+              <Span>
+                <SvgIcon>
+                  <use href={sprite + "#icon-shower"} />
+                </SvgIcon>
+                Shower/WC
+              </Span>
+            </Label>
+          </Group>
+
+          <GroupTitle id="checkbox-group-type" style={{ marginTop: "30px" }}>
+            Vehicle type
+          </GroupTitle>
+          <Group role="group" aria-labelledby="checkbox-group-type">
+            <Label>
+              <Input type="radio" name="type" value="panelTruck" />
+              <Span>
+                <SvgIconCampers>
+                  <use href={sprite + "#icon-van"} />
+                </SvgIconCampers>
+                Van
+              </Span>
+            </Label>
+            <Label>
+              <Input type="radio" name="type" value="fullyIntegrated" />
+              <Span>
+                <SvgIconCampers>
+                  <use href={sprite + "#icon-fully-integrated"} />
+                </SvgIconCampers>
+                Fully Integrated
+              </Span>
+            </Label>
+
+            <Label>
+              <Input type="radio" name="type" value="alcove" />
+              <Span>
+                <SvgIconCampers>
+                  <use href={sprite + "#icon-alcove"} />
+                </SvgIconCampers>
+                Alcove
+              </Span>
+            </Label>
+          </Group>
+
+          <Button type="submit">Search</Button>
+        </Form>
+      </Formik>
+    </>
   );
 };
-
-export default FilterComponent;

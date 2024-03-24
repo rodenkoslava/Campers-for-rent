@@ -1,20 +1,40 @@
-import { lazy } from "react";
+import { useDispatch } from "react-redux";
+import { getCampers } from "./redux/catalog/operations";
+import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Layout } from "./components/Layout";
+import { AppLayout } from "./AppLayout";
+import { lazy } from "react";
 
-const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
-const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"));
-const FavoritesPage = lazy(() => import("./pages/FavoritesPage/FavoritesPage"));
+const Home = lazy(() => import("./pages/Home/Home"));
+const Favorites = lazy(() => import("./pages/Favorite/Favorites"));
+const Catalog = lazy(() => import("./pages/Catalog/Catalog"));
+const ModalWindow = lazy(() => import("./components/ModalWindow/ModalWindow"));
+const Rewievs = lazy(() => import("./components/Reviews/Reviews"));
+const Features = lazy(() => import("./components/Features/Features"));
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCampers());
+  });
+
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="catalog" element={<CatalogPage />} />
-        <Route path="favorites" element={<FavoritesPage />} />
+      <Route path="/" element={<AppLayout />}>
+        <Route index element={<Home />} />
+        <Route path="catalog" element={<Catalog />} />
+        <Route path="catalog/:camperId" element={<Catalog />}>
+          <Route path="features" element={<Features />} />
+          <Route path="reviews" element={<Rewievs />} />
+        </Route>
+        <Route path="favorites" element={<Favorites />} />
+        <Route path="favorites/:camperId" element={<Favorites />}>
+          <Route path="features" element={<Features />} />
+          <Route path="reviews" element={<Rewievs />} />
+        </Route>
+        <Route path="*" element={<Home />} />
       </Route>
-      <Route path="*" element={<HomePage />} />
     </Routes>
   );
 }

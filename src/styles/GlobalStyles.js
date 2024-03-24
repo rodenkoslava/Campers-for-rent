@@ -8,11 +8,11 @@ export const GlobalStyles = createGlobalStyle`
 
 body {
   margin: 0;
-  background-color: #000;
+  background-color: #fff;
    font-family: 'Inter', sans-serif;
-   font-weight: 400;
+   font-weight: 500;
    font-style: normal;
-   color: #fff;
+   color: #101828;
    width: 100%;
    height: 100vh;
    margin: 0;
