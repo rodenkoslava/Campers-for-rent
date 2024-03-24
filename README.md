@@ -49,7 +49,6 @@ npm install
 ## **Starting the Application**
 
 4. Once the dependencies are installed, start the application using:
-   npm start
 
 ```
 npm run dev
