@@ -35,7 +35,7 @@ git clone https://github.com/rodenkoslava/Campers-for-rent
 2. Navigate to the project directory:
 
 ```
- cd campers-ukraine
+ cd Campers-for-rent
 ```
 
 3. Install dependencies using npm:
