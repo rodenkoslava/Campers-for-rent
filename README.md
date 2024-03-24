@@ -30,3 +30,31 @@ The "Campers-for-rent" project is an online platform for renting motorhomes (cam
 git clone https://github.com/rodenkoslava/Campers-for-rent
 
 ```
+
+## **Installing Dependencies**
+
+2.Navigate to the project directory:
+
+```
+ cd campers-ukraine
+
+```
+
+3.Install dependencies using npm:
+
+```
+npm install
+
+```
+
+## **Starting the Application**
+
+4.Once the dependencies are installed, start the application using:
+npm start
+
+```
+npm run dev
+
+```
+
+5.The application will start running locally, and you can access it via your web browser at http://localhost:3000.
