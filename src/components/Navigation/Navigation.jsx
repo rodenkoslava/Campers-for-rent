@@ -5,7 +5,6 @@ import {
   StyledLink,
   SvgIconCampers,
 } from "./Navigation.styled";
-import sprite from "../../assets/sprite.svg";
 
 export const Navigation = () => {
   return (
@@ -14,12 +13,7 @@ export const Navigation = () => {
         <nav>
           <List>
             <li>
-              <StyledLink to="/">
-                <SvgIconCampers>
-                  <use href={sprite + "#icon-alcove"} />
-                </SvgIconCampers>
-                Home
-              </StyledLink>
+              <StyledLink to="/">Home</StyledLink>
             </li>
             <li>
               <StyledLink to="/catalog">Catalog</StyledLink>

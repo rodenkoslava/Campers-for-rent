@@ -1,6 +1,4 @@
-import { HomeWrapper, Button, Title, Text } from "./Home.styled";
-import { Link } from "react-router-dom";
-import sprite from "../../assets/sprite.svg";
+import { HomeWrapper, Title, Text } from "./Home.styled";
 
 const HomePage = () => {
   return (
@@ -10,9 +8,6 @@ const HomePage = () => {
         <Text>
           Discover new places every day and experience the freedom of traveling
         </Text>
-        <Link to="/catalog">
-          <Button>CATALOG</Button>
-        </Link>
       </div>
     </HomeWrapper>
   );

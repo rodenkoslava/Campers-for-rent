@@ -5,7 +5,7 @@ import { CampersList } from "../../components/CatalogList/CampersList";
 import { Container } from "../../styles/GlobalStyles";
 import { selectIsLoading } from "../../redux/catalog/selectors";
 import { Loader } from "../../components/Loader/Loader";
-import camper from "../../assets/image/camper.jpg";
+import camper from "../../assets/image/1.jpg";
 import { Pictire, Title } from "./Favorites.styled";
 
 const Favorites = () => {
@@ -22,12 +22,9 @@ const Favorites = () => {
       {favoriteCampers.length === 0 && (
         <>
           <Title>
-            It seems that your favorite list is currently empty. To add campers
-            to your favorites, please visit the catalog where you can find a
-            list of campers. From there, you can select the campers you like and
-            add them to your favorites by clicking on the like button. Once
-            you've added campers to your favorites, you'll be able to view them
-            here.
+            Your favorites list is currently empty. In the catalog you can add
+            the products you like to your favorites and you will be able to see
+            them on this page.
           </Title>
           <Pictire src={camper} alt="camper" />
         </>

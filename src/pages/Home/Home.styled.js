@@ -26,34 +26,3 @@ export const HomeWrapper = styled.div`
   text-align: center;
   font-family: Arial, sans-serif;
 `;
-
-export const Button = styled.button`
-  color: #454545;
-  background: rgb(247, 247, 247);
-  padding: 5px 0;
-  margin: 0 auto;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 19px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  width: 250px;
-  height: 70px;
-  position: absolute;
-  bottom: 150px;
-  left: 50%;
-  transform: translateX(-50%);
-  &.active {
-    border-bottom: 1px solid #454545;
-    text-shadow: 0px 2px 17px rgba(246, 246, 246, 1);
-  }
-  &.active:hover {
-    border-bottom: 1px solid #e44848;
-  }
-  &:hover {
-    color: #e44848;
-  }
-`;
