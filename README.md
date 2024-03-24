@@ -2,6 +2,8 @@
 
 The "Campers-for-rent" project is an online platform for renting motorhomes (campers) for travel purposes. The platform allows users to find, browse, and rent campers for their travels to various destinations. Users can choose from a variety of camper models, view their features, rental prices, and availability, as well as ratings and reviews from other users.
 
+![Camper](./src/assets/image/bg-masthead.jpg)
+
 ## **Functionality**
 
 - Search and filtering of campers by various parameters such as location, camper type, number of seats, and more.
