@@ -17,3 +17,16 @@ The "Campers-for-rent" project is an online platform for renting motorhomes (cam
 - The frontend is developed using React.js, React Router, and Styled Components.
 - The backend is provided by mockapi.io, which offers a fake API for storing camper data.
 - This project enables users to easily find and rent campers for their travels, making the process of selection and booking as convenient and straightforward as possible.
+
+## **How to Use**
+
+---
+
+## **Cloning the Repository**
+
+1. Clone the repository from GitHub using the following command:
+
+```
+git clone https://github.com/rodenkoslava/Campers-for-rent
+
+```
