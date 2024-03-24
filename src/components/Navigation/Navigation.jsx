@@ -1,10 +1,5 @@
 import { Container } from "../../styles/GlobalStyles";
-import {
-  HeaderField,
-  List,
-  StyledLink,
-  SvgIconCampers,
-} from "./Navigation.styled";
+import { HeaderField, List, StyledLink } from "./Navigation.styled";
 
 export const Navigation = () => {
   return (
