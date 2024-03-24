@@ -6,11 +6,11 @@ The "Campers-for-rent" project is an online platform for renting motorhomes (cam
 
 - Search and filtering of campers by various parameters such as location, camper type, number of seats, and more.
 
-* Detailed view of camper information including photos, features, rental prices, and availability.
+- Detailed view of camper information including photos, features, rental prices, and availability.
 
 - Online booking of campers with the option to select dates and rental duration.
 
-* Viewing and rating of reviews from other users about the campers.
+- Viewing and rating of reviews from other users about the campers.
 
 ## **Technologies**
 
@@ -32,13 +32,13 @@ git clone https://github.com/rodenkoslava/Campers-for-rent
 
 ## **Installing Dependencies**
 
-2.Navigate to the project directory:
+2. Navigate to the project directory:
 
 ```
  cd campers-ukraine
 ```
 
-3.Install dependencies using npm:
+3. Install dependencies using npm:
 
 ```
 npm install
@@ -46,11 +46,11 @@ npm install
 
 ## **Starting the Application**
 
-4.Once the dependencies are installed, start the application using:
-npm start
+4. Once the dependencies are installed, start the application using:
+   npm start
 
 ```
 npm run dev
 ```
 
-5.The application will start running locally, and you can access it via your web browser at http://localhost:3000.
+5. The application will start running locally, and you can access it via your web browser at http://localhost:3000.
